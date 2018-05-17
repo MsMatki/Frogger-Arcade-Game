@@ -11,7 +11,7 @@ Use arrow keys to move the player left, right, up and down.
 ## How to install
 * To run this application, download the GitHub zip file or clone the repository.
 * Unzip the file
-* To start the game open the file index.html in your browser.
+* To start the game open the file index.html in your browser.  
 
 ## Screenshot
 
