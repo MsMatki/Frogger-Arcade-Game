@@ -1,8 +1,8 @@
 
 
-let ScoreOutput = document.querySelector('.cross-output');
-let LivesOutput = document.querySelector('.lives-output');
-let KillsOutput = document.querySelector('.kills-output');
+const ScoreOutput = document.querySelector('.cross-output');
+const LivesOutput = document.querySelector('.lives-output');
+const KillsOutput = document.querySelector('.kills-output');
 
 
 class GameEntity{
@@ -133,21 +133,21 @@ let allRocks = [];
 let allEnemies = [];
 
 //function pushes rock objects to array, and puts them to random positions
-function displayRocks() {
+const displayRocks = () => {
     allRocks = [];
     allRocks.push(new Rock(Math.floor(Math.random() * 5) * 100, Math.floor(Math.random() * 5) * 90));
     allRocks.push(new Rock(Math.floor(Math.random() * 5) * 100, Math.floor(Math.random() * 5) * 90));
     
    }
 //function pushes all enemy objects to array
-function displayEnemy() {
+const displayEnemy = () => {
  allEnemies.push(new Enemy(0, 55));
  allEnemies.push(new Enemy(0, 140));
  allEnemies.push(new Enemy(0, 225));
 }
 
 //this function triggers when player lost all lives
-function gameOver(){
+const gameOver = () => {
 if(player.lives <= 0){
     player.hidePlayer();
     player.lives = 0;
@@ -172,7 +172,7 @@ if(player.lives <= 0){
 }
 }
 //this function creates new game
-function newGame(){
+const newGame = () => {
     player.lives = 3;
     player.score = 0;
     ScoreOutput.innerHTML = player.score;
@@ -180,17 +180,17 @@ function newGame(){
     player.resetPlayer();
 }
 
-let rock = new Rock();
-let heart = new Heart(100, 200);
-let player = new Player(200, 400);
+const rock = new Rock();
+const heart = new Heart(100, 200);
+const player = new Player(200, 400);
 
 displayEnemy();
 displayRocks();
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. 
-document.addEventListener('keyup', function(e) {
-    var allowedKeys = {
+document.addEventListener('keyup',(e) => {
+    let allowedKeys = {
         37: 'left',
         38: 'up',
         39: 'right',
