@@ -12,7 +12,7 @@ If player loses all lives, game starts from beginning. Once the player reaches t
 
 ## Preview
 
-* Click [Here](https://msmatki.github.io/UdGame/) to Play the game.
+* Click [Here](https://msmatki.github.io/Frogger-Arcade-Game/) to Play the game.
 
 ## How to install
 
